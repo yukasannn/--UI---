@@ -11,8 +11,33 @@ function scrollTop(elem) {
 
 scrollTop('button');
 
-//ハンバーガーメニュー//
-const target = document.getElementById("menu");
+//ハンバーガーメニュー
+//const target = document.getElementById("menu");
+//target.addEventListener('click', () => {
+  //target.classList.toggle('open');
+//});
+//無効化//
+
+
+//タブメニュー//
+const tabs = document.getElementsByClassName('tab-menu__item');
+for (let i = 0; i < tabs.length; i++) {
+  tabs[i].addEventListener('click', tabSwitch);
+}
+function tabSwitch() {
+  document.getElementsByClassName('active')[0].classList.remove('active');
+  this.classList.add('active');
+  document.getElementsByClassName('show')[0].classList.remove('show');
+  const arrayTabs = Array.prototype.slice.call(tabs);
+  const index = arrayTabs.indexOf(this);
+  document.getElementsByClassName('tab-content__item')[index].classList.add('show');
+};
+
+
+//ドロワーメニュー//
+const target = document.getElementById("menu2");
 target.addEventListener('click', () => {
   target.classList.toggle('open');
+  const nav = document.getElementById("nav");
+  nav.classList.toggle('in');
 });

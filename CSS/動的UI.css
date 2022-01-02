@@ -1,3 +1,53 @@
+/*角ボタン*/
+.btn1 {
+  display: block;
+  width: 160px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+}
+.btn1:hover {
+  background: #000;
+  color: #fff;
+}
+
+/*丸ボタン*/
+.btn2 {
+  display: block;
+  width: 160px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 30px;
+}
+.btn2:hover {
+  background: #000;
+  color: #fff;
+}
+
+/*立体ボタン*/
+.btn3 {
+  display: block;
+  width: 160px;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  background: #0c88ca;
+  border-bottom: 4px solid #005691;
+  transition: 0s;
+}
+.btn3:hover {
+  background: #005691;
+  transform: translate3d(0, 4px, 0);
+  transition: 0s;
+  border-bottom: none;
+}
+
 /*トップへ戻る*/
 .top {
   height: 300px;
@@ -66,4 +116,104 @@
 .menu.open span:nth-of-type(3) {
   top: 14px;
   transform: rotate(-45deg);
+}
+
+/*タブメニュー */
+.tab {
+  width: 500px;
+}
+.tab-menu {
+  display: flex;
+}
+.tab-menu__item {
+  text-align: center;
+  padding: 10px 0;
+  cursor: pointer;
+  list-style: none;
+  width: 100px;
+  border-top: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+}
+.tab-menu__item:not(:first-child) {
+  border-left: none;
+}
+.tab-menu__item.active {
+  background: #000;
+  color: white;
+}
+.tab-content {
+  height: 200px;
+  border: 1px solid #000;
+}
+.tab-content__item {
+  display: none;
+  font-size: 40px;
+}
+.tab-content__item.show {
+  display: block;
+}
+
+/*ドロワーメニュー*/
+a {
+  text-decoration: none;
+  color: blue;
+}
+.nav {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  left: -100%;
+  background: #eee;
+  transition: .7s;
+  text-align: center;
+}
+.nav ul {
+  padding: 80px;
+}
+.nav ul li {
+  list-style-type: none;
+  margin-top: 50px;
+}
+.menu {
+  display: inline-block;
+  width: 36px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  left: 20px;
+  top: 20px;
+}
+.menu__line--top,
+.menu__line--middle,
+.menu__line--bottom {
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  position: absolute;
+  transition: 0.5s;
+}
+.menu__line--top {
+  top: 0;
+}
+.menu__line--middle {
+  top: 14px;
+}
+.menu__line--bottom {
+  bottom: 0;
+}
+.menu.open span:nth-of-type(1) {
+  top: 14px;
+  transform: rotate(45deg);
+}
+.menu.open span:nth-of-type(2) {
+  opacity: 0;
+}
+.menu.open span:nth-of-type(3) {
+  top: 14px;
+  transform: rotate(-45deg);
+}
+.in {
+  transform: translateX(100%);
 }
