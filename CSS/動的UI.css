@@ -1,35 +1,4 @@
-/*角ボタン　*/
-.btn1 {
-  display: block;
-  width: 160px;
-  padding: 15px;
-  text-align: center;
-  text-decoration: none;
-  color: #000;
-  border: 1px solid #000;
-}
-.btn1:hover {
-  background: #000;
-  color: #fff;
-}
-
-/*丸ボタン　*/
-.btn2 {
-  display: block;
-  width: 160px;
-  padding: 15px;
-  text-align: center;
-  text-decoration: none;
-  color: #000;
-  border: 1px solid #000;
-  border-radius: 30px;
-}
-.btn2:hover {
-  background: #000;
-  color: #fff;
-}
-
-/*立体ボタン　*/
+/*トップへ戻る*/
 .top {
   height: 300px;
   width: 100%;
@@ -56,4 +25,45 @@
   border: none;
   color: #fff;
   cursor: pointer;
+}
+
+/*ハンバーガーメニュー*/
+.menu {
+  display: inline-block;
+  width: 36px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+  left: 20px;
+  top: 20px;
+}
+.menu__line--top,
+.menu__line--middle,
+.menu__line--bottom {
+  display: inline-block;
+  width: 100%;
+  height: 4px;
+  background-color: #000;
+  position: absolute;
+  transition: 0.5s;
+}
+.menu__line--top {
+  top: 0;
+}
+.menu__line--middle {
+  top: 14px;
+}
+.menu__line--bottom {
+  bottom: 0;
+}
+.menu.open span:nth-of-type(1) {
+  top: 14px;
+  transform: rotate(45deg);
+}
+.menu.open span:nth-of-type(2) {
+  opacity: 0;
+}
+.menu.open span:nth-of-type(3) {
+  top: 14px;
+  transform: rotate(-45deg);
 }
