@@ -312,3 +312,29 @@ html {
   text-align: center;
   padding: 50px;
 }
+
+/*アコーディオンパネル*/
+.accordion {
+  width: 200px;
+  margin: 20px auto;
+}
+.menu {
+  background-color: #000;
+  color: white;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.contents {
+  text-align: center;
+  height: 0;
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+.contents.is-open {
+  border: 1px solid black;
+  padding: 10px;
+  height: auto;
+  opacity: 1;
+}
